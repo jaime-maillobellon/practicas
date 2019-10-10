@@ -1,6 +1,7 @@
 <table style="width: 100%; border: 1px solid black;">
     <tr>
         <th>Leído</th>
+        <th>Número</th>
         <th>Emisor</th>
         <th>Titulo</th>
         <th>Destinatario</th>
@@ -10,8 +11,15 @@
             <input type="radio" name="leido-{{i}}" [(ngModel)]="correo.leido" [value]=true> Si
             <input type="radio" name="leido-{{i}}" [(ngModel)]="correo.leido" [value]=false> No
         </td>
+        <td>{{i+1}}</td>
         <td>{{correo.emisor}}</td>
         <td>{{correo.titulo}}</td>
         <td>{{correo.destinatario}}</td>
     </tr>
 </table>
+
+<br>
+
+<h2>Estado de lectura del correo 1:</h2>
+<h3 *ngIf="correos[0].leido">Si</h3>
+<h3 *ngIf="!correos[0].leido">No</h3>
