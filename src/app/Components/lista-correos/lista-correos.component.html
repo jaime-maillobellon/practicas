@@ -12,8 +12,8 @@
     <ng-container *ngFor="let correo of correos; index as i;">
         <tr>
             <td>
-                <input type="radio" name="leido-{{i}}" [(ngModel)]="correo.leido" [value]=true disabled> Si
-                <input type="radio" name="leido-{{i}}" [(ngModel)]="correo.leido" [value]=false disabled> No
+                <input type="radio" name="leido-{{i}}" [(ngModel)]="correo.leido" [value]=true> Si
+                <input type="radio" name="leido-{{i}}" [(ngModel)]="correo.leido" [value]=false> No
             </td>
             <td>{{correo.emisor}}</td>
             <td>{{correo.titulo}}</td>
